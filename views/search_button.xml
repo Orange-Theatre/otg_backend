@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="otg_webclient_bootstrap"
+		inherit_id="web_responsive.webclient_bootstrap"
+		name="OTG App Drawer - Web Client"
+	>
+		<xpath expr="//button[@id='odooMenuBarToggle']" position="after">
+			<button type="button" 
+				class="fa fa-lg fa-search o_cp_searchview_toggle pull-right navbar-toggle o_hidden" 
+				data-toggle="collapse" 
+				data-target=".o_cp_searchview"
+			/>
+
+			<button type="button" 
+				class="fa fa-lg fa-hashtag o_mail_toggle_channels pull-right navbar-toggle o_hidden" 
+				Title="Toggle Channels"
+			/>
+		</xpath>
+
+		<xpath expr="//button[@class='app-drawer-toggle drawer-toggle pull-left navbar-toggle collapsed']" position="after">
+			<div class="app-title pull-left"/>
+		</xpath>
+    </template>
+</odoo>

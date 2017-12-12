@@ -1,0 +1,19 @@
+KANBAN
+	Make tags on kanban say the tag name like in v11. This is for mobile usability.
+	Make card colors be on the edge, not on the whole card
+
+MENU
+	Make submenus only appear on hover (in desktop mode only)
+
+APP DRAWER
+	Override header bar so it doesn't drift around on mobile
+	Redo accessible indicator
+
+CONTROL PANEL
+	Redesign to work on mobile
+
+CALENDAR
+	Fix D M W visibility
+
+FORM
+	Round edges on tags

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016, 2017 Openworx.
+    @author Mario Gielissen <mario@openworx.nl>
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<odoo>
+    <data>
+		<template id="assets_backend" name="OTG Backend" inherit_id="web.assets_backend">
+			<xpath expr="." position="inside">
+				<script type="text/javascript" src="/otg_backend/static/src/js/otg_backend.js"/>		
+				<link rel="stylesheet" href="/otg_backend/static/lib/font-awesome-4.7.0/css/font-awesome.min.css"/>		
+				<link rel="stylesheet" href="/otg_backend/static/src/less/bootswatch.less"/>
+				<link rel="stylesheet" href="/otg_backend/static/src/less/drawer.less"/>
+				<link rel="stylesheet" href="/otg_backend/static/src/less/style.less"/>
+				<link rel="stylesheet" href="/web_responsive/static/src/less/variables.less"/>
+				<link rel="stylesheet" href="/otg_backend/static/src/less/variables.less"/>
+			</xpath>
+		</template>
+    </data>
+</odoo>

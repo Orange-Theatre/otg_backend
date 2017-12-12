@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+	<t t-extend="FormView.buttons">
+        <t t-jquery="button.o_form_button_edit" t-operation="prepend">
+            <span class="fa fa-pencil hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_form_button_create" t-operation="prepend">
+            <span class="fa fa-plus hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_form_button_save" t-operation="prepend">
+            <span class="fa fa-floppy-o hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_form_button_cancel" t-operation="prepend">
+            <span class="fa fa-ban hidden_fa"></span>
+        </t>
+    </t>
+
+    <t t-extend="KanbanView.buttons">
+        <t t-jquery="button.o-kanban-button-new" t-operation="prepend">
+            <span class="fa fa-plus hidden_fa"></span>
+        </t>
+    </t>
+
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="prepend">
+            <span class="fa fa-plus hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_list_button_save" t-operation="prepend">
+            <span class="fa fa-floppy-o hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_list_button_discard" t-operation="prepend">
+            <span class="fa fa-trash-o hidden_fa"></span>
+        </t>
+    </t>
+
+    <t t-extend="ImportView.import_button">
+        <t t-jquery="button.o_button_import" t-operation="prepend">
+            <span class="fa fa-upload hidden_fa"></span>
+        </t>
+    </t>
+
+    <t t-extend="ImportView.buttons">
+        <t t-jquery="button.o_import_validate" t-operation="prepend">
+            <span class="fa fa-shield hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_import_import" t-operation="prepend">
+            <span class="fa fa-check hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_import_cancel" t-operation="prepend">
+            <span class="fa fa-times hidden_fa"></span>
+        </t>
+    </t>
+
+    <t t-extend="mail.chat.ControlButtons">
+        <t t-jquery="button.o_mail_toggle_channels" t-operation="prepend">
+            <span class="fa fa-hashtag hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_mail_chat_button_invite" t-operation="prepend">
+            <span class="fa fa-user-plus hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_mail_chat_button_mark_read" t-operation="prepend">
+            <span class="fa fa-envelope-open hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_mail_chat_button_unstar_all" t-operation="prepend">
+            <span class="fa fa-star-o hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_mail_chat_button_unsubscribe" t-operation="prepend">
+            <span class="fa fa-ban hidden_fa"></span>
+        </t>
+        <t t-jquery="button.o_mail_chat_button_settings" t-operation="prepend">
+            <span class="fa fa-cog hidden_fa"></span>
+        </t>
+    </t>
+
+        <t t-extend="mail.chat.Sidebar">
+        <t t-jquery="i.fa-star-o" t-operation="replace">
+            <i class="fa fa-star"/>
+        </t>
+    </t>
+
+    <t t-extend="CalendarView.buttons">
+        <t t-jquery="button.o_calendar_button_today" t-operation="prepend">
+            <span class="fa fa-calendar-check-o hidden_fa"></span>
+        </t>
+        <t t-jquery=".btn-group" t-operation="replace">
+            <button type="button" class="btn btn-icon o_cal_toggle o_hidden" data-toggle="collapse" data-target=".o_cal_mobile"/>
+    	    <div class="btn-group btn-group-sm o_calendar_scale">
+                <button type="button" class="o_calendar_button_day btn btn-sm btn-default"><span class="hidden_fa">D</span>Day</button>
+                <button type="button" class="o_calendar_button_week btn btn-sm btn-default"><span class="hidden_fa">W</span>Week</button>
+                <button type="button" class="o_calendar_button_month btn btn-sm btn-default"><span class="hidden_fa">M</span>Month</button>
+            </div>
+    	</t>
+    </t>
+
+    <t t-extend="Sidebar">
+        <t t-jquery=".o_dropdown_toggler_btn" t-operation="replace">
+            <button t-if="section.name != 'buttons'" t-attf-class="o_dropdown_toggler_btn btn btn-sm dropdown-toggle o_sidebar_button_{{section.name}}" data-toggle="dropdown">
+            	<t t-if="section.name == 'print'">
+    				<span class="fa fa-print hidden_fa"/>
+				</t>
+				<t t-if="section.name == 'other'">
+    				<span class="fa fa-ellipsis-h hidden_fa"/>
+				</t>
+                <t t-if="section.name == 'files'" t-raw="widget.items[section.name].length || ''"/>
+                <t t-esc="section.label"/> <span class="caret"/>
+            </button>
+        </t>
+    </t>
+</templates>
